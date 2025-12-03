@@ -8,91 +8,90 @@ The project simulates a real-world backend workflow used in financial systems, i
 
 The goal of this simulation is to build a simplified backend system capable of:
 
-Processing transaction messages from Kafka
+1. Processing transaction messages from Kafka
 
-Calling an external Incentive API
+2. Calling an external Incentive API
 
-Updating sender/recipient account balances
+3. Updating sender/recipient account balances
 
-Recording transactions into a database
+4. Recording transactions into a database
 
-Populating users from a file source
+5. Populating users from a file source
 
-Exposing a REST endpoint to query balances
+6. Exposing a REST endpoint to query balances
 
-Each task builds upon the previous one, resulting in a complete, functional microservice.
+## Each task builds upon the previous one, resulting in a complete, functional microservice.
 
 ##  Tasks Completed
-## 🔹 Task 1 – Project Setup
+##  Task 1 – Project Setup
 
 Configured the Spring Boot project with:
 
-Spring Web
+1. Spring Web
 
-Spring Data JPA
+2. Spring Data JPA
 
-Spring Kafka
+3. Spring Kafka
 
-H2 in-memory database
+4. H2 in-memory database
 
-Testcontainers & Spring Kafka Test
+5. Testcontainers & Spring Kafka Test
 
-Maven project structure validation
+6. Maven project structure validation
 
 All initial test cases passed successfully.
 
-##🔹 Task 2 – Kafka Transaction Listener
+## Task 2 – Kafka Transaction Listener
 
-Implemented a Kafka consumer to:
+1. Implemented a Kafka consumer to:
 
-Listen to transaction messages
+2. Listen to transaction messages
 
-Validate users & balance availability
+3. Validate users & balance availability
 
-Call external Incentive API using RestTemplate
+4. Call external Incentive API using RestTemplate
 
-Update user balances (sender & recipient)
+5. Update user balances (sender & recipient)
 
-Store transaction records
+6. Store transaction records
 
-Log updates for debugging (especially for wilbur)
+7. Log updates for debugging (especially for wilbur)
 
-##🔹 Task 3 – User Population System
+## Task 3 – User Population System
 
 Built components to load users from a file and persist them:
 
-UserPopulator – reads user data
+1. UserPopulator – reads user data
 
-DatabaseConduit – saves user records
+2. DatabaseConduit – saves user records
 
-Extended UserRepository with findByName()
+3. Extended UserRepository with findByName()
 
-Verified multi-user processing in tests
+4. Verified multi-user processing in tests
 
-##🔹 Task 4 – Balance Querying by Name
+## Task 4 – Balance Querying by Name
 
 Added functionality to:
 
-Retrieve a user’s balance using their name
+1. Retrieve a user’s balance using their name
 
-Log both exact & floored balance values
+2. Log both exact & floored balance values
 
-Validate final transaction outcomes
+4. Validate final transaction outcomes
 
 This logic is used in the unit tests for verification.
 
-##🔹 Task 5 – REST Balance Controller
+## Task 5 – REST Balance Controller
 
 Created a REST endpoint:
 
-GET /balance?userId=<id>
+1. GET /balance?userId=<id>
 
+2. Returns a Balance JSON object
 
-Returns a Balance JSON object
+3. Handles missing users by returning a balance of 0
 
-Handles missing users by returning a balance of 0
-
-Complete with tests validating all user IDs (0–12)
+4.  Complete with tests validating all user IDs (0–12)
 
 ## Tech Stack
 
@@ -112,21 +111,21 @@ Maven
 
 ##  Project Structure
 src/
- ├── main/
- │    ├── java/com/jpmc/midascore/
- │    │     ├── controller/        # REST endpoints
- │    │     ├── component/         # Kafka Listener + DB Conduit
- │    │     ├── repository/        # JPA Repositories
- │    │     ├── entity/            # User & Transaction models
- │    │     └── foundation/        # DTOs like Balance
- │    └── resources/
- │          └── application.yml    # Kafka + DB config
- └── test/
-       ├── TaskOneTests.java
-       ├── TaskTwoTests.java
-       ├── TaskThreeTests.java
-       ├── TaskFourTests.java
-       └── TaskFiveTests.java
+├── main/
+│ ├── java/com/jpmc/midascore/
+│ │ ├── controller/ # REST endpoints
+│ │ ├── component/ # Kafka Listener + DB Conduit
+│ │ ├── repository/ # JPA Repositories
+│ │ ├── entity/ # Entities (User, Transaction)
+│ │ └── foundation/ # DTOs like Balance
+│ └── resources/
+│ └── application.yml # Kafka + DB config
+└── test/
+├── TaskOneTests.java
+├── TaskTwoTests.java
+├── TaskThreeTests.java
+├── TaskFourTests.java
+└── TaskFiveTests.java
 
 ## Included Documentation
 
