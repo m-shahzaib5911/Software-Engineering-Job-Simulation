@@ -1,10 +1,10 @@
-🏦 JPMorgan Chase – Software Engineering Virtual Experience
+## 🏦 JPMorgan Chase – Software Engineering Virtual Experience
 Transaction Processing System (Tasks 1–5)
 
 This repository contains my completed implementation of Tasks 1–5 from the J.P. Morgan Chase Software Engineering Job Simulation (Forage).
 The project simulates a real-world backend workflow used in financial systems, including Kafka-based transaction processing, REST APIs, and database persistence.
 
-📌 Overview
+##  Overview
 
 The goal of this simulation is to build a simplified backend system capable of:
 
@@ -22,8 +22,8 @@ Exposing a REST endpoint to query balances
 
 Each task builds upon the previous one, resulting in a complete, functional microservice.
 
-✅ Tasks Completed
-🔹 Task 1 – Project Setup
+##  Tasks Completed
+## 🔹 Task 1 – Project Setup
 
 Configured the Spring Boot project with:
 
@@ -41,7 +41,7 @@ Maven project structure validation
 
 All initial test cases passed successfully.
 
-🔹 Task 2 – Kafka Transaction Listener
+##🔹 Task 2 – Kafka Transaction Listener
 
 Implemented a Kafka consumer to:
 
@@ -57,7 +57,7 @@ Store transaction records
 
 Log updates for debugging (especially for wilbur)
 
-🔹 Task 3 – User Population System
+##🔹 Task 3 – User Population System
 
 Built components to load users from a file and persist them:
 
@@ -69,7 +69,7 @@ Extended UserRepository with findByName()
 
 Verified multi-user processing in tests
 
-🔹 Task 4 – Balance Querying by Name
+##🔹 Task 4 – Balance Querying by Name
 
 Added functionality to:
 
@@ -81,7 +81,7 @@ Validate final transaction outcomes
 
 This logic is used in the unit tests for verification.
 
-🔹 Task 5 – REST Balance Controller
+##🔹 Task 5 – REST Balance Controller
 
 Created a REST endpoint:
 
@@ -94,7 +94,7 @@ Handles missing users by returning a balance of 0
 
 Complete with tests validating all user IDs (0–12)
 
-🛠️ Tech Stack
+## Tech Stack
 
 Java 17
 
@@ -110,7 +110,7 @@ Testcontainers
 
 Maven
 
-📁 Project Structure
+##  Project Structure
 src/
  ├── main/
  │    ├── java/com/jpmc/midascore/
@@ -128,13 +128,13 @@ src/
        ├── TaskFourTests.java
        └── TaskFiveTests.java
 
-📄 Included Documentation
+## Included Documentation
 
 A beginner-friendly PDF that fully explains all tasks:
 
-📘 "Markdown to PDF.pdf" – Detailed documentation for Tasks 1–5, including code, steps, and notes.
+## "Markdown to PDF.pdf" – Detailed documentation for Tasks 1–5, including code, steps, and notes.
 
-🎯 What This Project Demonstrates
+##  What This Project Demonstrates
 
 Understanding of event-driven architecture
 
@@ -148,7 +148,7 @@ Clean code, debugging, and test-driven development
 
 Ability to build real-world backend features
 
-🧑‍💻 Author
+##  Author
 
 Muhammad Shahzaib
 Cybersecurity & Software Engineering Enthusiast
