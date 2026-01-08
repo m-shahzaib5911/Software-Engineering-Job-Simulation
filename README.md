@@ -131,7 +131,7 @@ src/
 
 A beginner-friendly PDF that fully explains all tasks:
 
-## "Markdown to PDF.pdf" – Detailed documentation for Tasks 1–5, including code, steps, and notes.
+## "Solution.pdf" – Detailed documentation for Tasks 1–5, including code, steps, and notes.
 
 ##  What This Project Demonstrates
 
